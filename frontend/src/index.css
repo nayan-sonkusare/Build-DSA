@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+  /* or just: themes: light --default;   ← if you want to force only light by default */
+}

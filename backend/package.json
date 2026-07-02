@@ -1,0 +1,30 @@
+{
+  "name": "mysheet",
+  "version": "1.0.0",
+  "description": "mern project",
+  "homepage": "https://github.com/nayan-sonkusare/My-Sheet#readme",
+  "bugs": {
+    "url": "https://github.com/nayan-sonkusare/My-Sheet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayan-sonkusare/My-Sheet.git"
+  },
+  "license": "ISC",
+  "author": "nayan",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mongoose": "^9.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
