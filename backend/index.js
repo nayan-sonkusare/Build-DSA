@@ -12,11 +12,22 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-// Make sure you have required cors at the top: const cors = require('cors');
+const allowedOrigins = [
+    "https://build-dsa.vercel.app", 
+    "http://localhost:5173", // Allows your local dev environment
+    // Add any other specific Vercel preview links here if needed
+];
 
 app.use(cors({
-    origin: "https://build-dsa.vercel.app", // Your exact Vercel URL
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    origin: function (origin, callback) {
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        if (allowedOrigins.indexOf(origin) === -1) {
+            var msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
     credentials: true
 }));
 app.use(express.json());
