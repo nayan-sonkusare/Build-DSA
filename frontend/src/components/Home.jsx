@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 
-const API = "http://localhost:4000/api/sheet";
+// If using Vite:
+const API = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api/sheet";
 
 export default function Home() {
   const [user, setUser] = useState(null);

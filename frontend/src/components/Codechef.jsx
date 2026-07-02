@@ -9,7 +9,8 @@ import SheetItem from "./SheetItem";
 import Platform from "./Platform";
 
 const LOGO = "https://img.icons8.com/?size=100&id=Wq4dyyhFKRz6&format=png&color=000000";
-const API = "http://localhost:4000/api/sheet";
+// If using Vite:
+const API = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api/sheet";
 const PLATFORM = "Codechef";
 
 export default function Codechef() {

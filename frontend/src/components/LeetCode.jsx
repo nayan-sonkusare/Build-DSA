@@ -7,7 +7,8 @@ import SheetItem from "./SheetItem";
 import Platform from "./Platform";
 
 const LOGO = "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png";
-const API = "http://localhost:4000/api/sheet";
+// If using Vite:
+const API = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api/sheet";
 const PLATFORM = "leetcode";
 
 export default function LeetCode() {

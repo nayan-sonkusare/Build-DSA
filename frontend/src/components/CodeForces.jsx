@@ -8,7 +8,8 @@ import SheetItem from "./SheetItem";
 import Platform from "./Platform";
 
 const LOGO = "https://img.icons8.com/?size=100&id=jldAN67IAsrW&format=png&color=000000";
-const API = "http://localhost:4000/api/sheet";
+// If using Vite:
+const API = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api/sheet";
 const PLATFORM = "Codeforces";
 
 export default function Codeforces() {

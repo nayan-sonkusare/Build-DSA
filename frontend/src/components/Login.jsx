@@ -7,7 +7,8 @@ import LoginAnimation from "./LoginAnimation";
 
 
 
-const API = "http://localhost:4000/api/auth";
+// Vite will use the live URL in production, but fallback to localhost on your own computer!
+const API = `${import.meta.env.VITE_BACKEND_URL || "http://localhost:4000"}/api/auth`;
 
 export default function Login() {
   const navigate = useNavigate();

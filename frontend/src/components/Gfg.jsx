@@ -8,7 +8,8 @@ import SheetItem from "./SheetItem";
 import Platform from "./Platform";
 
 const LOGO = "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg";
-const API = "http://localhost:4000/api/sheet";
+// If using Vite:
+const API = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api/sheet";
 const PLATFORM = "geeksforgeeks";
 
 export default function Gfg() {
