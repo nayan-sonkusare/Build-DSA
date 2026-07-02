@@ -12,7 +12,13 @@ connectDB();
 const app = express();
 const PORT = process.env.PORT || 4000;
 
-app.use(cors());
+// Make sure you have required cors at the top: const cors = require('cors');
+
+app.use(cors({
+    origin: "https://build-dsa.vercel.app", // Your exact Vercel URL
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
