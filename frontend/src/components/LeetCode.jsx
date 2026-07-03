@@ -8,7 +8,7 @@ import Platform from "./Platform";
 
 const LOGO = "https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png";
 // If using Vite:
-const API = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api/sheet";
+const API = import.meta.env.VITE_BACKEND_URL ? `${import.meta.env.VITE_BACKEND_URL}/api/sheet` : "http://localhost:4000/api/sheet";
 const PLATFORM = "leetcode";
 
 export default function LeetCode() {

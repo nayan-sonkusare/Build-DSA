@@ -9,7 +9,7 @@ import Platform from "./Platform";
 
 const LOGO = "https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg";
 // If using Vite:
-const API = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000/api/sheet";
+const API = import.meta.env.VITE_BACKEND_URL ? `${import.meta.env.VITE_BACKEND_URL}/api/sheet` : "http://localhost:4000/api/sheet";
 const PLATFORM = "geeksforgeeks";
 
 export default function Gfg() {
